@@ -1,4 +1,4 @@
-- Pour demarrer ce projet vous avez besoin :
+## Pour demarrer ce projet vous avez besoin :
 - Un JDK 21
 - Créer une base de données en utilisant le SGBD MySQL, nommer 'bd-banque' ou si vous voulez renommer la base de données vous pouvez changer le nom depuis le fichier application.properties  
 - Démarrer votre votre serveur de base de données
