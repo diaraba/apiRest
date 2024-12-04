@@ -4,6 +4,7 @@ import com.demoRest.api.security.jwt.AuthEntryPointJwt;
 import com.demoRest.api.security.jwt.AuthTokenFilter;
 import com.demoRest.api.security.services.UserDetailsServiceImpl;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,8 +27,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 // jsr250Enabled = true,
 // prePostEnabled = true) // by default
 public class WebSecurityConfig {
+    @Autowired
     UserDetailsServiceImpl userDetailsService;
-
+    @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
 
 

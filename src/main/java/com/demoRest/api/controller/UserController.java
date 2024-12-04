@@ -5,6 +5,7 @@ import com.demoRest.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
-
+    @PreAuthorize("hasRole('ROLE_CLIENT')")
     @GetMapping(path = "", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public ResponseEntity<List<UserResponseDto>> compteList(){
         List<UserResponseDto> c1= userService.getAllClient();
